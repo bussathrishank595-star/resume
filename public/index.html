@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoom+ | Next-Gen Meetings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="authView" class="page">
+      <div class="hero">
+        <h1>Zoom+</h1>
+        <p>Meetings that go beyond video calls.</p>
+      </div>
+      <div class="card">
+        <label>Your name</label>
+        <input id="nameInput" placeholder="Type your name" />
+        <div class="row">
+          <button id="newRoomBtn" class="primary">Create Meeting</button>
+          <button id="joinBtn">Join Meeting</button>
+        </div>
+        <input id="roomInput" placeholder="Enter meeting ID (for join)" />
+        <p class="hint">
+          Extra features included: AI notes, live polls, reactions, shared notes,
+          hand raise, breakout planner, and smart action items.
+        </p>
+        <a class="resume-link" href="/resume.html">Open Professional Resume Website</a>
+      </div>
+    </div>
+
+    <div id="meetingView" class="page hidden">
+      <header>
+        <div>
+          <h2>Room: <span id="roomLabel"></span></h2>
+          <p id="meetingStatus">Connecting...</p>
+        </div>
+        <div class="row">
+          <button id="copyLinkBtn">Copy Invite Link</button>
+          <button id="leaveBtn" class="danger">Leave</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="video-panel">
+          <div class="toolbar">
+            <button id="toggleAudioBtn">Mute</button>
+            <button id="toggleVideoBtn">Video Off</button>
+            <button id="raiseHandBtn">Raise Hand</button>
+            <button id="captionBtn">Live Captions</button>
+            <button class="emoji" data-emoji="👏">👏</button>
+            <button class="emoji" data-emoji="🔥">🔥</button>
+            <button class="emoji" data-emoji="🎉">🎉</button>
+          </div>
+          <div id="videoGrid" class="video-grid"></div>
+          <div id="reactionOverlay"></div>
+        </section>
+
+        <aside class="side-panel">
+          <div class="tabs">
+            <button class="tab active" data-tab="chatTab">Chat</button>
+            <button class="tab" data-tab="participantsTab">People</button>
+            <button class="tab" data-tab="pollsTab">Polls</button>
+            <button class="tab" data-tab="notesTab">Notes</button>
+            <button class="tab" data-tab="aiTab">AI</button>
+          </div>
+
+          <div id="chatTab" class="tab-content active">
+            <div id="chatList" class="list"></div>
+            <div class="row">
+              <input id="chatInput" placeholder="Message everyone..." />
+              <button id="sendChatBtn" class="primary">Send</button>
+            </div>
+          </div>
+
+          <div id="participantsTab" class="tab-content">
+            <div id="participantsList" class="list"></div>
+            <h4>Breakout Planner (Extra)</h4>
+            <div class="row">
+              <input id="breakoutCount" type="number" min="2" value="2" />
+              <button id="makeBreakoutsBtn">Suggest Groups</button>
+            </div>
+            <div id="breakoutResults" class="list"></div>
+          </div>
+
+          <div id="pollsTab" class="tab-content">
+            <input id="pollQuestion" placeholder="Poll question" />
+            <input id="pollOptions" placeholder="Options comma-separated" />
+            <button id="createPollBtn" class="primary">Create Poll</button>
+            <div id="pollList" class="list"></div>
+          </div>
+
+          <div id="notesTab" class="tab-content">
+            <textarea id="notesInput" placeholder="Shared notes for everyone"></textarea>
+          </div>
+
+          <div id="aiTab" class="tab-content">
+            <button id="genSummaryBtn" class="primary">Generate AI Summary</button>
+            <div id="aiOutput" class="list"></div>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script  src="socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

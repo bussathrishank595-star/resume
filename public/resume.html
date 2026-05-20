@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bussa Thrishank | Resume</title>
+    <style>
+      :root {
+        --bg: #f3f6fb;
+        --paper: #ffffff;
+        --ink: #111827;
+        --muted: #6b7280;
+        --line: #e5e7eb;
+        --accent: #0f172a;
+        --tag-bg: #eef2ff;
+        --tag-ink: #1e3a8a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: radial-gradient(circle at top left, #e8eef9 5%, var(--bg) 45%);
+        color: var(--ink);
+      }
+
+      .wrapper {
+        min-height: 100vh;
+        padding: 28px 18px;
+        display: grid;
+        place-items: center;
+      }
+
+      .resume {
+        width: min(1080px, 100%);
+        background: var(--paper);
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 26px 60px rgba(15, 23, 42, 0.18);
+      }
+
+      .topbar {
+        background: var(--accent);
+        color: #fff;
+        padding: 34px 36px;
+      }
+
+      .name {
+        margin: 0;
+        font-size: clamp(1.9rem, 2.8vw, 2.6rem);
+        letter-spacing: 0.01em;
+      }
+
+      .role {
+        margin: 8px 0 0;
+        color: #cbd5e1;
+      }
+
+      .contacts {
+        margin-top: 18px;
+        display: grid;
+        gap: 8px;
+        grid-template-columns: 1fr 1fr;
+        font-size: 0.95rem;
+      }
+
+      .contacts a {
+        color: #e2e8f0;
+        text-underline-offset: 3px;
+      }
+
+      .body {
+        padding: 34px 36px;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: minmax(240px, 0.95fr) minmax(0, 2.05fr);
+      }
+
+      .section {
+        margin-bottom: 28px;
+      }
+
+      .section:last-child {
+        margin-bottom: 0;
+      }
+
+      .section h2 {
+        margin: 0 0 12px;
+        font-size: 1.08rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 8px;
+      }
+
+      .edu-school {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .muted {
+        margin: 5px 0;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .tags {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .tags li {
+        padding: 6px 11px;
+        border-radius: 999px;
+        background: var(--tag-bg);
+        color: var(--tag-ink);
+        font-size: 0.86rem;
+        font-weight: 600;
+      }
+
+      .points {
+        margin: 0;
+        padding-left: 18px;
+        color: #334155;
+        line-height: 1.6;
+      }
+
+      .summary {
+        margin: 0;
+        color: #334155;
+        line-height: 1.7;
+      }
+
+      .project {
+        margin-bottom: 18px;
+      }
+
+      .project:last-child {
+        margin-bottom: 0;
+      }
+
+      .project-title {
+        margin: 0;
+        font-size: 1.05rem;
+        font-weight: 700;
+      }
+
+      .stack {
+        margin: 2px 0 7px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .desc {
+        margin: 0;
+        color: #334155;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 880px) {
+        .contacts {
+          grid-template-columns: 1fr;
+        }
+
+        .body {
+          grid-template-columns: 1fr;
+          padding: 26px 22px;
+        }
+
+        .topbar {
+          padding: 28px 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <article class="resume">
+        <header class="topbar">
+          <h1 class="name">Bussa Thrishank</h1>
+          <p class="role">CSE (Generative AI) Student | Frontend Developer</p>
+          <div class="contacts">
+            <div>Phone: +91 79899 71353</div>
+            <div>Email: bussathrishank595@gmail.com</div>
+            <div>
+              LinkedIn:
+              <a
+                href="https://www.linkedin.com/in/thrishank-bussa-868a03370"
+                target="_blank"
+                rel="noreferrer"
+              >
+                linkedin.com/in/thrishank-bussa-868a03370
+              </a>
+            </div>
+            <div>
+              Portfolio:
+              <a href="https://portsa.niat.tech/" target="_blank" rel="noreferrer">
+                portsa.niat.tech
+              </a>
+            </div>
+          </div>
+        </header>
+
+        <section class="body">
+          <aside>
+            <div class="section">
+              <h2>Education</h2>
+              <p class="edu-school">Aurora Deemed University</p>
+              <p class="muted">B.Tech - CSE (Generative AI)</p>
+              <p class="muted">Academic Score: 90%+</p>
+            </div>
+
+            <div class="section">
+              <h2>Technical Skills</h2>
+              <ul class="tags">
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+                <li>Gen-AI</li>
+                <li>n8n Automations</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>SQL</li>
+                <li>MySQL</li>
+              </ul>
+            </div>
+
+            <div class="section">
+              <h2>Core Strengths</h2>
+              <ul class="points">
+                <li>Problem Solving</li>
+                <li>Frontend Development</li>
+                <li>Fast Learner</li>
+                <li>Team Collaboration</li>
+                <li>Creative Thinking</li>
+              </ul>
+            </div>
+          </aside>
+
+          <main>
+            <div class="section">
+              <h2>Professional Summary</h2>
+              <p class="summary">
+                Motivated Computer Science Engineering student specializing in
+                Generative AI with strong frontend development capabilities.
+                Experienced in building responsive and interactive web applications
+                using HTML, CSS, JavaScript, React, Python, and SQL. Passionate
+                about creating modern digital experiences and continuously improving
+                technical expertise through practical projects.
+              </p>
+            </div>
+
+            <div class="section">
+              <h2>Selected Projects</h2>
+              <article class="project">
+                <p class="project-title">AI Research &amp; Knowledge Hub for Enterprises</p>
+                <p class="stack">Gen-AI, RAG, n8n Automations, LLM Workflows</p>
+                <p class="desc">
+                  Built an enterprise knowledge platform to reduce time spent
+                  searching across wikis, documents, and PDFs. Implemented a
+                  multi-format ingestion pipeline with retrieval-augmented generation
+                  (RAG) to return precise answers, and used LLM-based rephrasing to
+                  deliver user-friendly explanations. Added agentic routing to forward
+                  unresolved queries to the right team and integrated text-to-audio
+                  summaries for quick listening. Improved productivity, reduced
+                  repetitive support queries, and accelerated onboarding.
+                </p>
+              </article>
+
+              <article class="project">
+                <p class="project-title">Splitter Web App</p>
+                <p class="stack">HTML, CSS, JavaScript</p>
+                <p class="desc">
+                  Developed a responsive web application with interactive UI behavior
+                  and modern frontend design patterns.
+                </p>
+              </article>
+
+              <article class="project">
+                <p class="project-title">Mathsss Web App</p>
+                <p class="stack">HTML, CSS, JavaScript</p>
+                <p class="desc">
+                  Built a math-focused application with responsive layout, smooth user
+                  interactions, and clear content flow.
+                </p>
+              </article>
+
+              <article class="project">
+                <p class="project-title">Logical Web App</p>
+                <p class="stack">HTML, CSS, JavaScript</p>
+                <p class="desc">
+                  Designed a logic-based application featuring engaging interface
+                  elements and dynamic frontend functionality.
+                </p>
+              </article>
+
+              <article class="project">
+                <p class="project-title">ByteBrewCafe Website</p>
+                <p class="stack">HTML, CSS, JavaScript</p>
+                <p class="desc">
+                  Created a cafe-themed responsive website with polished visual
+                  hierarchy and user-friendly navigation.
+                </p>
+              </article>
+
+              <article class="project">
+                <p class="project-title">ChemLearn Platform</p>
+                <p class="stack">HTML, CSS, JavaScript</p>
+                <p class="desc">
+                  Built an educational platform focused on responsive interfaces and
+                  interactive learning experiences.
+                </p>
+              </article>
+            </div>
+          </main>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>
